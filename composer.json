@@ -1,0 +1,16 @@
+{
+    "name": "brigita/cms",
+    "description": "Awesome cms project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "BrigitaGrybaiteBartke",
+            "email": "brigita.grybaite@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.13",
+        "symfony/cache": "^4.4",
+        "doctrine/annotations": "^1.13"
+    }
+}
