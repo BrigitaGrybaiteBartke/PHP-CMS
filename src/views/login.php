@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
             $_SESSION['message'] = "New project name has been saved!";
             $_SESSION['msg_type'] = "success";
-
         } else {
             $_SESSION['message'] = 'Incorrect username or password!';
             $_SESSION['msg_type'] = "danger";
@@ -31,36 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Maven Pro', sans-serif;
-        }
-
-        .width {
-            width: 350px;
-        }
-    </style>
-</head>
-
-
+<?php require_once "./src/views/fragments/head.php"; ?>
+<?php require_once "./src/views/css/style.php"; ?>
 
 
 <body>
@@ -71,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             unset($_SESSION['message']) ?>
         </div>
     <?php endif ?>
-
 
     <!-- login form -->
     <div class="d-flex flex-column align-items-center">

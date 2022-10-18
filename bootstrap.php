@@ -2,7 +2,6 @@
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-// session_start();
             
 require "vendor/autoload.php";
 
@@ -11,7 +10,7 @@ $isDevMode = true;
 $proxyDir = null;
 $cache = null;
 $useSimpleAnnotationReader = false;
-$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/models"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
 
 // database configuration parameters
 $conn = array(

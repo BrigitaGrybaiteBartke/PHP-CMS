@@ -1,7 +1,7 @@
 <?php
-
 require_once "bootstrap.php";
 session_start();
+
 use models\Page;
 
 $base_url = 'http://localhost:8080/cms';
@@ -22,19 +22,7 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-</head>
+<?php require_once "./src/views/fragments/head.php"; ?>
 
 <body>
     <div <?php isset($_SESSION['logged']) == true ? print('style="display: block"') : print('style="display: none"') ?>>
@@ -46,7 +34,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="mt-5">
                     <form action="" method="POST">
-                        <div class="my-3 width">
+                        <div class="my-3">
                             <label for="pageTitle" class="form-label">Page title:</label>
                             <input type="text" name="pageTitle" placeholder="Enter new Page title" class="form-control">
                         </div>
@@ -61,6 +49,6 @@ if (isset($_POST['submit'])) {
                     </form>
                 </div>
             </div>
-
 </body>
+
 </html>

@@ -11,6 +11,5 @@ if (isset($_GET['delete'])) {
     $page = $entityManager->find('models\Page', $_GET['delete']);
     $entityManager->remove($page);
     $entityManager->flush();
-    // redirect_to_root();
     header('Location:' . $base_url . '/admin');
 }
