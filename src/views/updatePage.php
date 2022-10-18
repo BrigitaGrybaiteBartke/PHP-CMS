@@ -41,14 +41,14 @@ if (isset($_POST['updatePage'])) {
             ?>
             <form action="" method="POST">
 
-                <div class="my-3 width">
+                <div class="my-3">
                     <input type="hidden" name="updateId" value="<?php echo $page->getId() ?>">
                 </div>
-                <div class="my-3 width">
+                <div class="my-3">
                     <label for="updateTitle" class="form-label">Update page title:</label>
                     <input type="text" name="updateTitle" value="<?php echo $page->getPageTitle() ?>" class="form-control">
                 </div>
-                <div class="my-3 width">
+                <div class="my-3">
                     <label for="updateContent" class="form-label">Update page content:</label>
                     <textarea name="updateContent" rows="10" cols="100" class="form-control"><?php echo $page->getPageContent() ?></textarea>
                 </div>
