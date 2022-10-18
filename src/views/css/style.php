@@ -10,4 +10,7 @@
             font-family: 'Maven Pro', sans-serif;
         }
 
+        .width {
+            width: 350px;
+        }
 </style>

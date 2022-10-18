@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
                             <label for="pageTitle" class="form-label">Page title:</label>
                             <input type="text" name="pageTitle" placeholder="Enter new Page title" class="form-control">
                         </div>
-                        <div class="my-3 width">
+                        <div class="my-3">
                             <label for="pageContent" class="form-label">Page content:</label>
                             <textarea name="pageContent" rows="10" cols="100" placeholder="Enter Page content" class="form-control"></textarea>
                         </div>
