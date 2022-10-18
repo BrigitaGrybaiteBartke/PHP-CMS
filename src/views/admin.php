@@ -58,7 +58,7 @@ if (isset($_GET['action']) == 'logout') {
         <?php isset($_SESSION['logged']) == true ? print($greeting) : null ?>
         <!-- add new page -->
         <div>
-            <a href="./add" class="btn btn-success mb-3">Add new page</a>
+            <a href="./add" class="btn btn-primary mb-3">Add new page</a>
         </div>
         <div>
             <table class="table table-hover table-bordered shadow p-3 mb-3 bg-body rounded">
