@@ -1,9 +1,9 @@
 <?php
-
 require_once "bootstrap.php";
 session_start();
 
 $base_url = 'http://localhost:8080/cms';
+
 $message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
@@ -15,9 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             $_SESSION['password'] = $password;
             $_SESSION['logged'] = true;
             header('Location:' . $base_url . '/admin');
-
-            $_SESSION['message'] = "New project name has been saved!";
-            $_SESSION['msg_type'] = "success";
         } else {
             $_SESSION['message'] = 'Incorrect username or password!';
             $_SESSION['msg_type'] = "danger";
@@ -27,12 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         $_SESSION['msg_type'] = "danger";
     }
 }
-
 ?>
 
 <?php require_once "./src/views/fragments/head.php"; ?>
-<?php require_once "./src/views/css/style.php"; ?>
-
 
 <body>
     <!-- Empty input field message -->
@@ -43,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         </div>
     <?php endif ?>
 
-    <!-- login form -->
+    <!-- Admin login form -->
     <div class="d-flex flex-column align-items-center">
         <div class="text-center mt-5 mb-3">
             <h1>Admin login</h1>

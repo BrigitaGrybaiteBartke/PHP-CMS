@@ -1,12 +1,10 @@
 <?php
-
 require_once "bootstrap.php";
 session_start();
 
-// use models\Page;
-
 $base_url = 'http://localhost:8080/cms';
 
+// Cancel page update
 if (isset($_POST['cancel'])) {
     header('Location:' . $base_url . '/admin');
 }
@@ -17,30 +15,25 @@ if (isset($_POST['updatePage'])) {
         $page = $entityManager->find('models\Page', $_POST['updateId']);
         $page->getId($_POST['updateId']);
         $page->setPageTitle($_POST['updateTitle']);
-
         $page->setPageContent($_POST['updateContent']);
         $entityManager->flush();
-        // redirect_to_root();
         header('Location:' . $base_url . '/admin');
     }
 }
 ?>
 
-<?php require_once "./src/views/fragments/head.php";?>
+<?php require_once "./src/views/fragments/head.php"; ?>
 
 <body>
-
     <div class="container">
         <div class="text-center mt-5">
             <h3>Update Page</h3>
         </div>
         <div class="mt-5">
             <?php
-            // if(isset($_GET['update'])) {
             $page = $entityManager->find('models\Page', $_GET['update']);
             ?>
             <form action="" method="POST">
-
                 <div class="my-3">
                     <input type="hidden" name="updateId" value="<?php echo $page->getId() ?>">
                 </div>

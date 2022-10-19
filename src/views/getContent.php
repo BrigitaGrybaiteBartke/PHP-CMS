@@ -7,9 +7,9 @@
         $page->getPageTitle();
         $page->getPageContent();
 
-        // echo "<div class=\"container\">";
+        echo "<div class=\"container\">";
         print($page->getPageContent());
-        // echo "</div>";
+        echo "</div>";
     } else {
         $page = $entityManager->getRepository('models\Page')->findBy(array('id' => '1'));
         $page[0] !== NULL ? print $page[0]->getPageContent() : '';

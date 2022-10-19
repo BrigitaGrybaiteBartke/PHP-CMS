@@ -1,16 +1,10 @@
 <?php
-
 require "bootstrap.php";
 session_start();
-
-// use models\Page;
-
 ?>
 
 <?php require_once "./src/views/fragments/head.php"; ?>
-
 <body>
-
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -29,10 +23,8 @@ session_start();
         </div>
     </nav>
 
-    <?php require_once "./src/views/content.php"; ?>
-
+    <?php require_once "./src/views/getContent.php"; ?>
     <?php require_once "./src/views/fragments/footer.php" ?>
-
 
 </body>
 
