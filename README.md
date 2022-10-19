@@ -21,7 +21,7 @@ Once connected to the admin panel, a new page and it's content can be created, u
 
 To access admin panel use URL address: http://localhost/ "created folder name here"/**admin**.
 
-Login credentials are specified in login form input field placeholders
+Login credentials are specified in login form input field placeholders.
 
 Page content preview is possible without login.
 
