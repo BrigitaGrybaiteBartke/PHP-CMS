@@ -29,6 +29,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div <?php isset($_SESSION['logged']) == true ? print('style="display: block"') : print('style="display: none"') ?>></div>
     <div <?php if (isset($_SESSION['logged']) == false) header('Location: ./login'); ?>></div>
+    
     <div class="container">
         <div class="text-center mt-5">
             <h3>Create a new Page</h3>

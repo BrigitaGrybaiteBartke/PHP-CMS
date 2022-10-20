@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 }
 ?>
 
-<?php require_once "./src/views/fragments/head.php"; ?>
+<?php require_once "./src/views/fragments/head.php" ?>
 
 <body>
     <!-- Empty input field message -->

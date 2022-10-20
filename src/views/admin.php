@@ -22,8 +22,8 @@ if (isset($_GET['action']) == 'logout') {
 <?php require_once "./src/views/fragments/head.php"; ?>
 
 <body>
-    <div <?php isset($_SESSION['logged']) == true ? print('style="display: block"') : print('style="display: none"') ?>>
-    <div <?php if (isset($_SESSION['logged']) == false) header('Location: ./login'); ?>>
+    <div <?php isset($_SESSION['logged']) == true ? print('style="display: block"') : print('style="display: none"') ?>></div>
+    <div <?php if (isset($_SESSION['logged']) == false) header('Location: ./login'); ?>></div>
 
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,21 +54,22 @@ if (isset($_GET['action']) == 'logout') {
                     <th>Page Name</th>
                     <th>Action</th>
                 </tr>
-                    <?php
-                    $page = $entityManager->getRepository('models\Page')->findAll();
-                    foreach ($page as $p) : ?>
-                <tr>
-                    <td><?php echo $p->getPageTitle() ?></td>
-                    <td>
-                        <?php if ($p->getId() != '1') : ?>
-                            <a href="./update?update=<?php echo $p->getId() ?>" class="btn btn-outline-primary">Update</a>
-                            <a href="./delete?delete=<?php echo $p->getId() ?>" class="btn btn-outline-danger">Delete</a>
-                        <?php else : ?>
-                            <a href="./update?update=<?php echo $p->getId() ?>" class="btn btn-outline-primary">Update</a>
-                        <?php endif ?>
-                    </td>
-                </tr>
-                    <?php endforeach ?>
+                <?php
+                $page = $entityManager->getRepository('models\Page')->findAll();
+                foreach ($page as $p) :
+                ?>
+                    <tr>
+                        <td><?php echo $p->getPageTitle() ?></td>
+                        <td>
+                            <?php if ($p->getId() != '1') : ?>
+                                <a href="./update?update=<?php echo $p->getId() ?>" class="btn btn-outline-primary">Update</a>
+                                <a href="./delete?delete=<?php echo $p->getId() ?>" class="btn btn-outline-danger">Delete</a>
+                            <?php else : ?>
+                                <a href="./update?update=<?php echo $p->getId() ?>" class="btn btn-outline-primary">Update</a>
+                            <?php endif ?>
+                        </td>
+                    </tr>
+                <?php endforeach ?>
             </table>
         </div>
     </div>

@@ -11,7 +11,7 @@ if (isset($_POST['cancel'])) {
 
 // Update page
 if (isset($_POST['updatePage'])) {
-    if (isset($_POST['updateTitle']) and isset($_POST['updateContent'])) {
+    if (isset($_POST['updateTitle']) AND isset($_POST['updateContent'])) {
         $page = $entityManager->find('models\Page', $_POST['updateId']);
         $page->getId($_POST['updateId']);
 
@@ -26,7 +26,7 @@ if (isset($_POST['updatePage'])) {
 }
 ?>
 
-<?php require_once "./src/views/fragments/head.php"; ?>
+<?php require_once "./src/views/fragments/head.php" ?>
 
 <body>
     <div class="container">
