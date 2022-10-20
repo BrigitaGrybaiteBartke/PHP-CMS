@@ -11,7 +11,7 @@ if (isset($_POST['cancel'])) {
 
 // Update page
 if (isset($_POST['updatePage'])) {
-    if(isset($_POST['updateTitle']) AND isset($_POST['updateContent'])) {
+    if (isset($_POST['updateTitle']) and isset($_POST['updateContent'])) {
         $page = $entityManager->find('models\Page', $_POST['updateId']);
         $page->getId($_POST['updateId']);
 
@@ -34,9 +34,7 @@ if (isset($_POST['updatePage'])) {
             <h3>Update Page</h3>
         </div>
         <div class="mt-5">
-            <?php
-            $page = $entityManager->find('models\Page', $_GET['update']);
-            ?>
+            <?php $page = $entityManager->find('models\Page', $_GET['update']); ?>
             <form action="" method="POST">
                 <div class="my-3">
                     <input type="hidden" name="updateId" value="<?php echo $page->getId() ?>">
