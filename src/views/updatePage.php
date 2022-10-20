@@ -11,12 +11,16 @@ if (isset($_POST['cancel'])) {
 
 // Update page
 if (isset($_POST['updatePage'])) {
-    if (!empty($_POST['updateTitle']) and !empty($_POST['updateContent'])) {
+    if(isset($_POST['updateTitle']) AND isset($_POST['updateContent'])) {
         $page = $entityManager->find('models\Page', $_POST['updateId']);
         $page->getId($_POST['updateId']);
-        $page->setPageTitle($_POST['updateTitle']);
+
+        if ($page->getId() !== 1)
+            $page->setPageTitle($_POST['updateTitle']);
+
         $page->setPageContent($_POST['updateContent']);
         $entityManager->flush();
+
         header('Location:' . $base_url . '/admin');
     }
 }
@@ -39,7 +43,7 @@ if (isset($_POST['updatePage'])) {
                 </div>
                 <div class="my-3">
                     <label for="updateTitle" class="form-label">Update page title:</label>
-                    <input type="text" name="updateTitle" value="<?php echo $page->getPageTitle() ?>" class="form-control">
+                    <input type="text" name="updateTitle" value="<?php echo $page->getPageTitle() ?>" class="form-control" <?php echo $page->getId() === 1 ? 'readonly' : '' ?>>
                 </div>
                 <div class="my-3">
                     <label for="updateContent" class="form-label">Update page content:</label>
