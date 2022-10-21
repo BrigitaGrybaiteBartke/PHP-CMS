@@ -6,7 +6,7 @@ session_start();
 <?php require_once "./src/views/fragments/head.php"; ?>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <?php

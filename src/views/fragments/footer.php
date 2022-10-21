@@ -1,4 +1,4 @@
-<footer class="text-center text-white fixed-bottom mt-5" style="background-color: #f1f1f1;">
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
     <div class="pt-1">
         <section class="mb-1">
             <!-- Linkedin -->

@@ -25,7 +25,7 @@ if (isset($_GET['action']) == 'logout') {
     <div <?php isset($_SESSION['logged']) == true ? print('style="display: block"') : print('style="display: none"') ?>></div>
     <div <?php if (isset($_SESSION['logged']) == false) header('Location: ./login'); ?>></div>
 
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li>
