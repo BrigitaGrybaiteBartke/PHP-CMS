@@ -11,8 +11,6 @@ A simple application with basic content management system (CMS) functionality.
 * MySQL
 * CSS Framework Bootstrap
 
-
-
 #### Functionality:
 
 App has the ability to manage page content without writing any code.
@@ -24,8 +22,6 @@ To access admin panel use URL address: http://localhost/ "created folder name he
 Login credentials are specified in login form input field placeholders.
 
 Page content preview is possible without login.
-
-
 
 ## Getting Started
 
@@ -41,7 +37,6 @@ Page content preview is possible without login.
 
    `php composer.phar install`
 
-    
 * **bootstrap.php** file contains database configuration parameters
 
 * After connecting to the database import **dump.sql** file from cloned repository folder. To do so follow these steps:
@@ -49,8 +44,6 @@ Page content preview is possible without login.
     **Server** -> **Data Import** -> choose the option **Import from Self-Contained File** -> select **dump.sql** file -> click **Start Import**
 
 * Home page: http://localhost/ "ENTER created folder name here"
-
-
 
 ## Author
 Project is created by Brigita Grybaitė-Bartkė.
