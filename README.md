@@ -25,9 +25,12 @@ Page content preview is possible without login.
 
 ## Getting Started
 
-* Clone [Repository](https://github.com/BrigitaGrybaiteBartke/PHP_CRUD.git)
+* Clone repository:
+```
+git clone https://github.com/BrigitaGrybaiteBartke/PHP_CRUD.git
+```
 
-* Run XAMPP and start Apache Server and Mysql database
+* Run XAMPP and start Apache Server, and Mysql database
 
 * Open XAMPP htdocs folder - clone application code to this folder
 
@@ -35,7 +38,9 @@ Page content preview is possible without login.
     
 * Once opened cloned app folder with source-code editor run this command in terminal:
 
-   `php composer.phar install`
+```
+php composer.phar install
+```
 
 * **bootstrap.php** file contains database configuration parameters
 
@@ -46,5 +51,6 @@ Page content preview is possible without login.
 * Home page: http://localhost/ "ENTER created folder name here"
 
 ## Author
-Project is created by Brigita Grybaitė-Bartkė.
+Project is created by Brigita Grybaitė-Bartkė,
+
 [Linkedin](https://www.linkedin.com/in/brigita-grybait%C4%97-bartk%C4%97-487403112)
